@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <title>La maison de Tanger</title>
+    <link rel="stylesheet" href="Hotels.css"/>
+</head>
+
+<body>
+    <ul>
+        <li><a href="HomePage.xhtml">Home</a></li>
+        <li><a href="Hotels.xhtml">Hotels</a></li>
+        <li><a href="AboutUs.xhtml">About</a></li>
+        <li><a href="none">Contact Us</a></li>
+        <li><a href="Login.xhtml">Login</a></li>
+    </ul>
+    <br/>
+    <h:form>
+        <h1>La Maison de Tanger </h1>
+        <p>9, Rue Al Mabarra, Marshan, 90000 Tanger, Maroc</p>
+        <h:graphicImage value = "Images/hotel%20tanger.webp" />
+        <br/>
+        <div>
+            <p>
+                Vous pouvez bénéficier d'une réduction Genius dans l'établissement La Maison de Tanger ! <h:commandLink value="Connecter vous" action="Login"/> pour économiser.
+
+                Dotée d'une piscine extérieure et d'une vue sur la baie de Tanger, la chambre d'hôtes La Maison de Tanger vous accueille dans le centre-ville de Tanger, à 2 km de la plage. Le Grand Socco et la médina se trouvent à 10 minutes à pied.
+
+                Affichant une décoration néo-marocaine, les chambres et les suites de la chambre d'hôtes La Maison de Tanger comprennent une climatisation réversible, une connexion Wi-Fi gratuite et une télévision. Elles donnent sur les jardins ou la mer. Leur salle de bains privative est pourvue d'une baignoire ou d'une douche.
+
+                Cette chambre d'hôtes sert un petit-déjeuner tous les matins. Sur demande, vous pourrez déguster des plats marocains traditionnels dans la salle à manger qui s'ouvre sur le jardin.
+
+                Lors de votre séjour, vous pourrez vous détendre dans l'élégant salon ou sur la terrasse lorsque le temps le permet.
+
+                Cette chambre d'hôtes est située à 10 km de l'aéroport de Tanger et à 10 minutes de marche de la zone portuaire de la ville. Le parking privé sur place est accessible sans supplément.
+
+                C'est le quartier préféré des voyageurs visitant Tanger, selon les commentaires clients indépendants.
+
+                Les couples apprécient particulièrement l'emplacement de cet établissement. Ils lui donnent la note de 9,5 pour un séjour à deux.            </p>
+        </div>
+        <br/>
+        <h2 style="color: dodgerblue;">Réservation Chambres</h2>
+        <div style="background: #cccccc">
+            <h:panelGrid columns="3" width="60%">
+                <h:panelGroup>
+                    <h3>Date de debut</h3>
+                    <input type="date" id="start" name="trip-start"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h3>Date de fin</h3>
+                    <input type="date" id="finish" name="trip-ended"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h:outputText value="Chambres"/>
+                    <h:inputText style="width: 40%" value="#{reserveHotelBean.nbChambre}"/>
+                </h:panelGroup>
+
+            </h:panelGrid>
+        </div>
+        <br/><br/>
+
+        <h:panelGrid columns="4" border="1" width="90%">
+            <h:panelGroup><b>Pour</b></h:panelGroup>
+            <h:panelGroup><b>Type de logement</b></h:panelGroup>
+            <h:panelGroup><b>Réservation</b></h:panelGroup>
+            <h:panelGrid><b>Tarifs</b></h:panelGrid>
+
+            <h:panelGroup>2 Personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre double supérieur</u></h4>
+                <p>
+                    1 lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option1}"/>
+            </h:panelGroup>
+            <h:panelGroup>160 Dh</h:panelGroup>
+
+            <h:panelGroup>4 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre familiale</u></h4>
+                <p>
+                    2 lits simples et 1 grand lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option2}"/>
+            </h:panelGroup>
+            <h:panelGroup>170 Dh</h:panelGroup>
+
+            <h:panelGroup>3 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre triple</u></h4>
+                <p>
+                    3 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option3}"/>
+            </h:panelGroup>
+            <h:panelGroup>200 Dh</h:panelGroup>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Lits Jumeaux Supérieure</u></h4>
+                <p>
+                    2 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option4}"/>
+            </h:panelGroup>
+            <h:panelGroup>240 Dh</h:panelGroup>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Suite 1</u></h4>
+                <p>
+                    1 lit simple  et 1 très grand lit double  ou 1 très grand lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option5}"/>
+            </h:panelGroup>
+            <h:panelGroup>250 Dh</h:panelGroup>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Suite 2</u></h4>
+                <p>
+                    1 grand lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option6}"/>
+            </h:panelGroup>
+            <h:panelGroup>260 Dh</h:panelGroup>
+        </h:panelGrid>
+
+    </h:form>
+
+</body>
+</html>

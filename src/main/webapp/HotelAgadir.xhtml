@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <title>Taghazout Bay Apartment</title>
+    <link rel="stylesheet" href="Hotels.css"/>
+</head>
+
+<body>
+    <ul>
+        <li><a href="HomePage.xhtml">Home</a></li>
+        <li><a href="Hotels.xhtml">Hotels</a></li>
+        <li><a href="AboutUs.xhtml">About</a></li>
+        <li><a href="none">Contact Us</a></li>
+        <li><a href="Login.xhtml">Login</a></li>
+    </ul>
+    <br/>
+    <h:form>
+        <h1>Taghazout Bay Apartment </h1>
+        <p>RN1 Tamraght plage Imouran residence tighoula, 80000 Agadir, Maroc –</p>
+        <h:graphicImage value = "Images/hotel%20agadir.webp" />
+        <br/>
+        <div>
+            <p>
+                Vous pouvez bénéficier d'une réduction Genius dans l'établissement Taghazout Bay Apartment ! <h:commandLink value="Connecter vous" action="Login"/> pour économiser.
+
+                Situé à Agadir, dans la région de Souss-Massa-Drâa, à proximité de la plage de Taghazout, le Taghazout Bay Apartment propose un hébergement avec connexion Wi-Fi et parking privé gratuits, ainsi qu'un accès à une piscine intérieure.
+
+                Les logements disposent de carrelage, d'un coin salon avec une télévision par satellite à écran plat, d'une cuisine entièrement équipée avec un coin repas et d'une salle de bains privative. Vous pourrez profiter d'un micro-ondes, d'un réfrigérateur, de plaques de cuisson et d'une machine à café.
+
+                Lors de votre séjour, vous pourrez profiter d'une terrasse.
+
+                Le Taghazout Bay Apartment assure un service de location de voitures. Vous pourrez pratiquer la pêche dans les environs.
+
+                Le port d'Agadir et les ruines d'Agadir Oufella se trouvent à 11 km. L'aéroport d'Agadir-Al Massira, le plus proche, est à 33 km du Taghazout Bay Apartment. Un service de navette aéroport est assuré moyennant des frais supplémentaires.            </p>
+        </div>
+        <br/>
+        <h2 style="color: dodgerblue;">Réservation Chambres</h2>
+        <div style="background: #cccccc">
+            <h:panelGrid columns="3" width="60%">
+                <h:panelGroup>
+                    <h3>Date de debut</h3>
+                    <input type="date" id="start" name="trip-start"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h3>Date de fin</h3>
+                    <input type="date" id="finish" name="trip-ended"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h:outputText value="Chambres"/>
+                    <h:inputText style="width: 40%" value="#{reserveHotelBean.nbChambre}"/>
+                </h:panelGroup>
+
+            </h:panelGrid>
+        </div>
+        <br/><br/>
+
+        <h:panelGrid columns="4" border="1" width="90%">
+            <h:panelGroup><b>Pour</b></h:panelGroup>
+            <h:panelGroup><b>Type de logement</b></h:panelGroup>
+            <h:panelGroup><b>Réservation</b></h:panelGroup>
+            <h:panelGrid><b>Tarifs</b></h:panelGrid>
+
+            <h:panelGroup>4 Personnes adultes + 2 enfants</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Apartement 2 chambres</u></h4>
+                <p><b>Chambre 1:</b> 1 lit double</p>
+                <p><b>Chambre 2:</b> 2 lits simples</p>
+                <p><b>Salon:</b> 2 canapés-lits</p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option1}"/>
+            </h:panelGroup>
+            <h:panelGroup>200 Dh</h:panelGroup>
+
+            <h:panelGroup>2 Personnes adultes + 3 enfants</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Apartement 3 chambres</u></h4>
+                <p><b>Chambre 1:</b> 1 trés grand lit double</p>
+                <p><b>Salon:</b> 3 canapés-lits</p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option2}"/>
+            </h:panelGroup>
+            <h:panelGroup>230 Dh</h:panelGroup>
+
+            <h:panelGroup>2 Personnes adultes + 2 enfants</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Apartement avec balcon</u></h4>
+                <p><b>Chambre 1:</b> 1 trés grand lit double</p>
+                <p><b>Chambre 2:</b> 2 lits simples</p>
+                <p><b>Salon:</b> 2 canapés-lits</p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option3}"/>
+            </h:panelGroup>
+            <h:panelGroup>250 Dh</h:panelGroup>
+
+        </h:panelGrid>
+
+    </h:form>
+
+</body>
+</html>

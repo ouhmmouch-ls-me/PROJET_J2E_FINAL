@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <title>Wazo Hotel</title>
+    <link rel="stylesheet" href="Hotels.css"/>
+</head>
+
+<h:body>
+    <ul>
+        <li><a href="HomePage.xhtml">Home</a></li>
+        <li><a href="Hotels.xhtml">Hotels</a></li>
+        <li><a href="AboutUs.xhtml">About</a></li>
+        <li><a href="none">Contact Us</a></li>
+        <li><a href="Login.xhtml">Login</a></li>
+    </ul>
+    <br/>
+
+    <h:form>
+        <h1>Wazo Hotel </h1>
+        <p>Avenue Abdelkrim Khattabi , Route de Casablanca Marrakech, 40000 Marrakech, Maroc –</p>
+        <h:graphicImage value = "Images/hotel%20kech.webp" />
+        <br/>
+        <div>
+            <p>
+                Vous pouvez bénéficier d'une réduction Genius dans l'établissement Wazo Hotel ! <h:commandLink value="Connecter vous" action="Login"/> pour économiser.
+
+                Situé à Marrakech dans la région de Marrakech-Tensift-Haouz, à 4 km des jardins Majorelle, l'établissement Wazo Hotel vous propose un centre de spa et une salle de sport.
+
+                Il compte aussi une aire de jeux pour enfants, un restaurant et une piscine extérieure ouverte en saison. Le Wazo Hotel met gratuitement à votre disposition une connexion Wi-Fi dans l'ensemble de ses locaux.
+
+                Climatisées, toutes ses chambres disposent d'une télévision à écran plat. Leur salle de bains privative est pourvue d'une baignoire ou d'une douche. Des peignoirs, des chaussons et des articles de toilette gratuits sont en outre fournis pour votre plus grand confort.
+
+                Lors de votre séjour, vous pourrez profiter d'une réception ouverte 24h/24, d'un salon commun, d'un salon de coiffure, ainsi que d'une boutique de souvenirs.
+
+                L'établissement assure également un service de location de voitures. Vous logerez à 5 km du centre commercial Carré Eden et de la place Jamaâ El Fna. L'aéroport de Marrakech-Ménara est à 9 km du Wazo Hotel.
+            </p>
+        </div>
+        <br/>
+        <h2 style="color: dodgerblue;">Réservation Chambres</h2>
+        <div style="background: #cccccc">
+            <h:panelGrid columns="3" width="60%">
+                <h:panelGroup>
+                    <h3>Date de debut</h3>
+                    <input type="date" id="start" name="trip-start"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h3>Date de fin</h3>
+                    <input type="date" id="finish" name="trip-ended"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h:outputText value="Chambres"/>
+                    <h:inputText style="width: 40%" value="#{reserveHotelBean.nbChambre}"/>
+                </h:panelGroup>
+
+            </h:panelGrid>
+        </div>
+        <br/><br/>
+
+        <h:panelGrid columns="4" border="1" width="90%">
+            <h:panelGroup><b>Pour</b></h:panelGroup>
+            <h:panelGroup><b>Type de logement</b></h:panelGroup>
+            <h:panelGroup><b>Réservation</b></h:panelGroup>
+            <h:panelGrid><b>Tarifs</b></h:panelGrid>
+
+            <h:panelGroup>2 Personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre double supérieur</u></h4>
+                <p>
+                    1 lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option1}"/>
+            </h:panelGroup>
+            <h:panelGrid>150 Dh</h:panelGrid>
+
+            <h:panelGroup>4 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre familiale</u></h4>
+                <p>
+                    2 lits simples et 1 grand lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option2}"/>
+            </h:panelGroup>
+            <h:panelGrid>160 Dh</h:panelGrid>
+
+            <h:panelGroup>3 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre triple</u></h4>
+                <p>
+                    3 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option3}"/>
+            </h:panelGroup>
+            <h:panelGrid>170 Dh</h:panelGrid>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Lits Jumeaux Supérieure</u></h4>
+                <p>
+                    2 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option4}"/>
+            </h:panelGroup>
+            <h:panelGrid>180 Dh</h:panelGrid>
+
+            <h:panelGroup>2 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Lits Jumeaux - Vue sur Piscine</u></h4>
+                <p>
+                    2 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option5}"/>
+            </h:panelGroup>
+            <h:panelGrid>190 Dh</h:panelGrid>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Double Supérieure - Vue sur Piscine</u></h4>
+                <p>
+                    1 lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option6}"/>
+            </h:panelGroup>
+            <h:panelGrid>200 Dh</h:panelGrid>
+        </h:panelGrid>
+
+    </h:form>
+</h:body>
+</html>

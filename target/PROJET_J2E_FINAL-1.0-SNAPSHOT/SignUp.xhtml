@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="Login.css"/>
+</head>
+<h:body>
+    <ul>
+        <li><a href="HomePage.xhtml">Home</a></li>
+        <li><a href="Hotels.xhtml">Hotels</a></li>
+        <li><a href="AboutUs.xhtml">About</a></li>
+        <li><a href="none">Contact Us</a></li>
+        <li><a href="Login.xhtml">Login</a></li>
+    </ul>
+    <br/>
+    <h:form>
+        <h1 style="text-align: center"><b>SIGN UP</b></h1>
+
+        <p style="margin-left: 15px">
+            <h:outputText value="Username" style="font-size: 30px"/>
+            <br/>
+            <h:inputText id="Username" value="#{signUpBean.userName}" style="width: 100%"/>
+            <br/><br/>
+        </p>
+
+        <p style="margin-left: 15px">
+            <h:outputText value="Email" style="font-size: 30px"/>
+            <br/>
+            <h:inputText id="Email" value="#{signUpBean.email}" style="width: 100%"/>
+            <br/><br/>
+        </p>
+
+        <p style="margin-left: 15px">
+            <h:outputText value="Password" style="font-size: 30px"/>
+            <br/>
+            <h:inputSecret id="Password" value="#{signUpBean.password}" style="width: 100%;width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box"/>
+            <br/><br/>
+        </p>
+
+        <p style="margin-left: 15px">
+            <h:outputText value="Confirm your password" style="font-size: 30px"/>
+            <br/>
+            <h:inputSecret id="ConfirmPassword" value="#{signUpBean.confirmPassword}" style="width: 100%;width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box"/>
+            <br/><br/>
+        </p>
+
+        <p style="margin-left: 700px">
+            <h:commandButton value="Sign Up" style="width: 20%"/>
+        </p>
+
+    </h:form>
+
+</h:body>
+
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <title>DISCOVER THE DIFFERENT HOTELS</title>
+    <link rel="stylesheet" href="Hotels.css"/>
+</head>
+
+<h:body>
+    <ul>
+        <li><a href="HomePage.xhtml">Home</a></li>
+        <li><a href="Hotels.xhtml">Hotels</a></li>
+        <li><a href="AboutUs.xhtml">About</a></li>
+        <li><a href="none">Contact Us</a></li>
+        <li><a href="Login.xhtml">Login</a></li>
+    </ul>
+    <br/>
+
+   <h:form>
+       <div style="background: #c6ecd9">
+           <h:panelGrid columns="2">
+               <h:graphicImage value = "Images/hotel%20kech.webp" width="200px" height="200px"/>
+               <h1>Wazo Hotel - Marrakech</h1>
+               <p style="margin-left: 10px">
+                   Situé à Marrakech dans la région de Marrakech-Tensift-Haouz, à 4 km des jardins Majorelle, l'établissement Wazo Hotel vous propose un centre de spa et une salle de sport.
+               </p>
+               <h:commandButton value="Réserver" action="#{listeHotelBean.Marrakech}" style="width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer"/>
+           </h:panelGrid>
+           <br/>
+       </div>
+       <br/>
+       <div style="background: #b1f5f5">
+           <h:panelGrid columns="2">
+               <h:graphicImage value = "Images/hotel%20agadir.webp" width="200px" height="200px"/>
+               <h1>Taghazout Bay Apartment - Agadir</h1>
+               <p style="margin-left: 10px">
+                   Situé à Agadir, dans la région de Souss-Massa-Drâa, à proximité de la plage de Taghazout, le Taghazout Bay Apartment propose un hébergement avec connexion Wi-Fi et parking privé gratuits, ainsi qu'un accès à une piscine intérieure.
+               </p>
+               <h:commandButton value="Réserver" style="width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer" action="#{listeHotelBean.Agadir}"/>
+           </h:panelGrid>
+           <br/>
+       </div>
+       <br/>
+       <div style="background: #e1d6f1">
+           <h:panelGrid columns="2">
+               <h:graphicImage value = "Images/hotel%20tanger.webp" width="200px" height="200px"/>
+               <h1>La maison de Tanger - Tanger</h1>
+               <p style="margin-left: 10px">
+                   Dotée d'une piscine extérieure et d'une vue sur la baie de Tanger, la chambre d'hôtes La Maison de Tanger vous accueille dans le centre-ville de Tanger, à 2 km de la plage.
+               </p>
+               <h:commandButton value="Réserver" style="width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer" action="#{listeHotelBean.Tanger}"/>
+           </h:panelGrid>
+           <br/>
+       </div>
+       <br/>
+       <div style="background: #f3f2e7">
+           <h:panelGrid columns="2">
+               <h:graphicImage value = "Images/hotel%20fes.webp" width="200px" height="200px"/>
+               <h1>Riad Sidrat Fes - Fes</h1>
+               <p style="margin-left: 10px">
+                   Doté d'un jardin et d'une terrasse, le Riad Sidrat Fes est situé à Fès, à 1,9 km du palais royal et à 1,4 km de la médersa Bou 'Inania.
+               </p>
+               <h:commandButton value="Réserver" style="width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer" action="#{listeHotelBean.Fes}"/>
+           </h:panelGrid>
+           <br/>
+       </div>
+       <br/>
+   </h:form>
+</h:body>
+</html>

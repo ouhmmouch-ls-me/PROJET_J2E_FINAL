@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+    <title>WELCOME TO OUR HOTEL BOOKING WEBSITE</title>
+    <link rel="stylesheet" href="HomePage.css"/>
+</head>
+
+<h:body>
+
+        <h1 style="color: cornflowerblue"><b>HOTEL BOOKING</b></h1>
+        <ul>
+            <li><a href="HomePage.xhtml">Home</a></li>
+            <li><a href="Hotels.xhtml">Hotels</a></li>
+            <li><a href="AboutUs.xhtml">About</a></li>
+            <li><a href="none">Contact Us</a></li>
+            <li><a href="Login.xhtml">Login</a></li>
+        </ul>
+        <br/>
+
+        <br/>
+        <p style="text-align: end">
+            <h:inputText id="Search"/> <h:commandButton value="search" action="none" style="size: 20px"/>
+        </p>
+        <br/>
+    <div style="background: #bce8f8">
+        <h2>Ou allez-vous ?</h2>
+        <h:selectOneMenu value="#{homeBean.ville}">
+            <f:selectItem itemValue="Marrakech" itemLabel="Marrakech"/>
+            <f:selectItem itemValue="Agadir" itemLabel="Agadir"/>
+            <f:selectItem itemValue="Tanger" itemLabel="Tanger"/>
+            <f:selectItem itemValue="Fes" itemLabel="Fes"/>
+        </h:selectOneMenu>
+        <br/>
+        <div>
+            <div style="display: inline-block">
+                <h3>Date de debut</h3>
+                <input type="date" id="start" name="trip-start"
+                       value="2018-07-22"
+                       min="2020-01-01" max="2020-12-31"/>
+
+                <h3>Date de fin</h3>
+                <input type="date" id="finish" name="trip-ended"
+                       value="2018-07-22"
+                       min="2020-01-01" max="2020-12-31"/>
+            </div>
+        </div>
+        <br/>
+    </div>
+
+    <br/>
+    <div style="background: #9cd5c0">
+        <h2>Combien etes-vous ?</h2>
+        <h:form>
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="@next" value="Adultes"/>
+                <p:spinner id="adultes"/>
+            </div>
+            <br/>
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="@next" value="Enfants"/>
+                <p:spinner id="enfants" />
+            </div>
+            <br/>
+        </h:form>
+    </div>
+
+
+</h:body>
+
+</html>

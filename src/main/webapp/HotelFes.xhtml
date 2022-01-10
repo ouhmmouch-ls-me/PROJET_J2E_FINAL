@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <title>Riad Sidrat Fes</title>
+    <link rel="stylesheet" href="Hotels.css"/>
+</head>
+
+<body>
+    <ul>
+        <li><a href="HomePage.xhtml">Home</a></li>
+        <li><a href="Hotels.xhtml">Hotels</a></li>
+        <li><a href="AboutUs.xhtml">About</a></li>
+        <li><a href="none">Contact Us</a></li>
+        <li><a href="Login.xhtml">Login</a></li>
+    </ul>
+    <br/>
+    <h:form>
+        <h1>Riad Sidrat Fes</h1>
+        <p>4 bis Derb Horra ,Talaa Kebira, Fès el-Bali, 30110 Fès, Maroc </p>
+        <h:graphicImage value = "Images/hotel%20fes.webp" />
+        <br/>
+        <div>
+            <p>
+                Vous pouvez bénéficier d'une réduction Genius dans l'établissement Riad Sidrat Fes ! <h:commandLink value="Connecter vous" action="Login"/> pour économiser.
+
+                Doté d'un jardin et d'une terrasse, le Riad Sidrat Fes est situé à Fès, à 1,9 km du palais royal et à 1,4 km de la médersa Bou 'Inania. Vous séjournerez à 1,7 km de la place Batha, à 2,5 km de la médina et à 2,9 km de l'université Al Quaraouiyine. Il propose une réception ouverte 24h/24, un service d'étage et une connexion Wi-Fi gratuite dans l'ensemble de ses locaux.
+
+                Toutes les chambres comprennent une salle de bains privative. Vous pourrez profiter gratuitement de thé et de café toute la journée, ainsi que d'un goûter.
+
+                Un petit-déjeuner continental est servi tous les matins sur place.
+
+                Vous séjournerez à 3,9 km du centre commercial Borj Fez et à 4,2 km du C.C.I.S Fes. L'aéroport de Fès-Saïss, le plus proche, est implanté à 18 km.
+
+                C'est le quartier préféré des voyageurs visitant Fès, selon les commentaires clients indépendants.
+
+                Les couples apprécient particulièrement l'emplacement de cet établissement. Ils lui donnent la note de 9,7 pour un séjour à deux.            </p>
+        </div>
+        <br/>
+        <h2 style="color: dodgerblue;">Réservation Chambres</h2>
+        <div style="background: #cccccc">
+            <h:panelGrid columns="3" width="60%">
+                <h:panelGroup>
+                    <h3>Date de debut</h3>
+                    <input type="date" id="start" name="trip-start"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h3>Date de fin</h3>
+                    <input type="date" id="finish" name="trip-ended"
+                           value="2020-01-01"
+                           min="2020-01-01" max="2020-12-31"/>
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h:outputText value="Chambres"/>
+                    <h:inputText value="#{reserveHotelBean.nbChambre}" style="width: 40%"/>
+                </h:panelGroup>
+
+            </h:panelGrid>
+        </div>
+        <br/><br/>
+
+        <h:panelGrid columns="4" border="1" width="90%">
+            <h:panelGroup><b>Pour</b></h:panelGroup>
+            <h:panelGroup><b>Type de logement</b></h:panelGroup>
+            <h:panelGroup><b>Réservation</b></h:panelGroup>
+            <h:panelGrid><b>Tarifs</b></h:panelGrid>
+
+            <h:panelGroup>2 Personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre double supérieur</u></h4>
+                <p>
+                    1 lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option1}"/>
+            </h:panelGroup>
+            <h:panelGroup>100 Dh</h:panelGroup>
+
+            <h:panelGroup>4 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre familiale</u></h4>
+                <p>
+                    2 lits simples et 1 grand lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option2}"/>
+            </h:panelGroup>
+            <h:panelGroup>120 Dh</h:panelGroup>
+
+            <h:panelGroup>1 personnes adulte</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre simple</u></h4>
+                <p>
+                    1 lits simple
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option3}"/>
+            </h:panelGroup>
+            <h:panelGroup>140 Dh</h:panelGroup>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Lits Jumeaux Supérieure</u></h4>
+                <p>
+                    2 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option4}"/>
+            </h:panelGroup>
+            <h:panelGroup>160 Dh</h:panelGroup>
+
+            <h:panelGroup>2 personnes adultes</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Lits Jumeaux - Vue sur Piscine</u></h4>
+                <p>
+                    2 lits simples
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option5}"/>
+            </h:panelGroup>
+            <h:panelGroup>180 Dh</h:panelGroup>
+
+            <h:panelGroup>2 personnes adultes + 1 enfant</h:panelGroup>
+            <h:panelGroup>
+                <h4><u>Chambre Double Supérieure - Vue sur Piscine</u></h4>
+                <p>
+                    1 lit double
+                </p>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:commandButton value="Réserver" action="#{reserveHotelBean.Option6}"/>
+            </h:panelGroup>
+            <h:panelGroup>200 Dh</h:panelGroup>
+        </h:panelGrid>
+
+    </h:form>
+</body>
+</html>

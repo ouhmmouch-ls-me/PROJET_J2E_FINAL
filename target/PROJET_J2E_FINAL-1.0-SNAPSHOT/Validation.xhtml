@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jstl/core">
+
+<head>
+    <title>TICKET</title>
+    <link rel="stylesheet" href="Login.css"/>
+</head>
+
+<h:body>
+    <h:form>
+        <h2>Réservation reussite</h2>
+        <h:panelGrid columns="1" border="1">
+            <br/>
+            <c:if test="#{listeHotelBean.choixVille == 1}">
+                <h3>Hotel : Wazo hotel</h3>
+                <c:when test="#{reserveHotelBean.choixOption == 1}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsMarrakech[0]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifMarrakech[0]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 2}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsMarrakech[1]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifMarrakech[1]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 3}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsMarrakech[2]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifMarrakech[2]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 4}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsMarrakech[3]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifMarrakech[3]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 5}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsMarrakech[4]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifMarrakech[4]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 6}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsMarrakech[5]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifMarrakech[5]}"/></h3>
+                </c:when>
+            </c:if>
+            <c:if test="#{listeHotelBean.choixVille == 2}">
+                <h3>Hotel : Taghazout Bay Apartment</h3>
+                <c:when test="#{reserveHotelBean.choixOption == 1}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsAgadir[0]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifAgadir[0]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 2}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsAgadir[1]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifAgadir[1]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 3}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsAgadir[2]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifAgadir[2]}"/></h3>
+                </c:when>
+
+            </c:if>
+            <c:if test="#{listeHotelBean.choixVille == 3}">
+                <h3>Hotel : La maison de Tanger</h3>
+                <c:when test="#{reserveHotelBean.choixOption == 1}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsTanger[0]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifTanger[0]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 2}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsTanger[1]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifTanger[1]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 3}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsTanger[2]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifTanger[2]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 4}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsTanger[3]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifTanger[3]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 5}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsTanger[4]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifTanger[4]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 6}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsTanger[5]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifTanger[5]}"/></h3>
+                </c:when>
+
+            </c:if>
+            <c:if test="#{listeHotelBean.choixVille == 4}">
+                <h3>Hotel : Riad Sidrat Fes</h3>
+                <c:when test="#{reserveHotelBean.choixOption == 1}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsFes[0]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifFes[0]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 2}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsFes[1]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifFes[1]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 3}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsFes[2]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifFes[2]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 4}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsFes[3]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifFes[3]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 5}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsFes[4]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifFes[4]}"/></h3>
+                </c:when>
+                <c:when test="#{reserveHotelBean.choixOption == 6}">
+                    <h3>Option : <h:outputText value="#{reserveHotelBean.optionsFes[5]}"/></h3>
+                    <h3>Tarif : <h:outputText value="#{reserveHotelBean.tarifFes[5]}"/></h3>
+                </c:when>
+
+            </c:if>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
